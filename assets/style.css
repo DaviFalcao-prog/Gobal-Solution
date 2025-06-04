@@ -82,7 +82,6 @@ body{
 }
 .card{
     background-color: rgb(139, 155, 171);
-    font-weight: bold;
     color: #0c0180;
     margin: .75rem 0; /* 0.75rem = 12px */
     padding: 1em;
