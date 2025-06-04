@@ -2,7 +2,9 @@
     font-family: 'caveat';
     src: url('./font/Caveat-VariableFont_wght.ttf') format('truetype');
 }
-    
+html{
+    scroll-behavior: smooth;
+}  
 *{
     box-sizing: border-box;
     padding: 0;
@@ -74,6 +76,10 @@ body{
     justify-content: center;
     padding: 2rem;
 }
+main section{
+    outline: 2px solid #00b4ff;           
+    box-shadow: 0 0 10px #00b4ff;        
+  }
 .cards-article{
     display: flex;
     flex-wrap: wrap;
@@ -119,3 +125,5 @@ body{
     width: 100%;
     bottom: 0;
 }
+
+
