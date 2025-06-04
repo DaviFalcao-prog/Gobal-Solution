@@ -17,6 +17,7 @@ body{
 
 /* Header styles */
 .header{
+    background-color: #152b59;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -106,7 +107,14 @@ body{
 
 /* Footer styles */
 .footer{
+    background-color: #152b59;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 0.5rem 0;
-    position: relative;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
