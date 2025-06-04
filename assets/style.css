@@ -42,6 +42,7 @@ body{
 
 /* Hero section styles */
 .text{
+    font-weight: bold;
     text-align: center;
     margin-bottom: 1rem;
 }
