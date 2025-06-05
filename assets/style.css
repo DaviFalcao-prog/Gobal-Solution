@@ -27,6 +27,11 @@ body{
     padding: 1rem 2rem;
     position: relative;
 }
+.logo{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
 .header h1{
     font-size: 2.8rem;
     font-family: 'caveat', sans-serif, cursive;
@@ -39,7 +44,13 @@ body{
 }
 .nav-links a{
     text-decoration: none;
-    color: rgb(170, 220, 255)
+    color: rgb(170, 220, 255);
+}
+.nav-links a:hover{
+    background-color: rgba(0, 230, 255, 0.5);
+    border-radius: 5px;
+    border-bottom: rgb(170, 220, 255) 2px solid;
+    transition: background-color 0.5s ease;
 }
 
 /* Hero section styles */
@@ -76,10 +87,20 @@ body{
     justify-content: center;
     padding: 2rem;
 }
-main section{
-    outline: 2px solid #00b4ff;           
-    box-shadow: 0 0 10px #00b4ff;        
+main section:hover{
+    outline: 3.5px solid #00b4ff;           
+    box-shadow: 0 0 10px #00b4ff;
+    transition: all 0.3s ease-in-out;        
+}
+/* Animação de Destaque das seções, achei que ficou legal então vou deixar comentado aqui.
+@keyframes pulse {
+    0%   { background-color: #fff; }
+    100% { background-color: transparent;        }
+  } 
+  .flash {
+    animation: pulse 1s ease-out;
   }
+*/
 .cards-article{
     display: flex;
     flex-wrap: wrap;
