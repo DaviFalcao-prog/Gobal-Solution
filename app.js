@@ -1,3 +1,5 @@
+const seletor = document.getElementById('colorPicker');
+
 const navLinks = document.querySelectorAll('.navbar a');
 const allSections = document.querySelectorAll('section');
 
