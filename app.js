@@ -40,7 +40,7 @@ burger.addEventListener('click', function() {
 });
 
 //Fecha menu hamburguer ao clicar em um link
-listaLink.querySelectorAll.forEach(function(link) {
+listaLink.querySelectorAll('a').forEach(function(link) {
   link.addEventListener('click', () => {
     listaLink.classList.remove('open');
     burger.classList.remove('active');

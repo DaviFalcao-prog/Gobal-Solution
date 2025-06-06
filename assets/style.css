@@ -76,7 +76,7 @@ body{
 .hero-slideShow{
     position: relative;
     display: flex;
-    height: 100%; 
+    height: 50vh; 
     flex-direction: column;
     align-items: center;
     color: var(--text-color);
@@ -98,7 +98,8 @@ body{
     transition: opacity 1s ease;
     z-index: 0;
   }
-#slide-active {
+
+.slide.active {
     opacity: 1;
     z-index: 1;
   }
