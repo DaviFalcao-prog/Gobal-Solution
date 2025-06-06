@@ -24,18 +24,17 @@ navLinks.forEach(function (link) {
   });
 });
 //Configurando menu hamburguer
-// cache elements once
 const burger   = document.getElementById('hamburger-menu');
 const listaLink = document.getElementById('nav-links');
 
-// toggle menu
+//Abre o menu hamburguer ao clicar no icone
 burger.addEventListener('click', () => {
   listaLink.classList.toggle('open');     // show / hide links
   burger.classList.toggle('active');     // swap icons
 });
 
-// close menu when a link is clicked (mobile UX)
-document.querySelectorAll('#nav-links a').forEach(link => {
+//Fecha menu hamburguer ao clicar em um link
+listaLink.querySelectorAll.forEach(link => {
   link.addEventListener('click', () => {
     listaLink.classList.remove('open');
     burger.classList.remove('active');
