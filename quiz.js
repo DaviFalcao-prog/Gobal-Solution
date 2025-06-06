@@ -18,8 +18,13 @@ const correcao = {
 formulario.addEventListener("submit", function (e) {
     e.preventDefault();
     
-      // Calcula a pontuação
-      let pontos = 0;
+     if(resultado !== length.correcao){
+        alert("Por favor, responda todas as perguntas antes de enviar o formulário.");
+        return;
+     }
+
+    // Calcula a pontuação
+    let pontos = 0;
 
     for (let i = 1; i <= 10; i++) {
         const resposta = formulario.querySelector(`input[name="p${i}"]:checked`);
@@ -56,4 +61,10 @@ listaLink.querySelectorAll('a').forEach(function(link) {
   });
 });
 
-
+//configurando seleção de cor do fundo
+const seletor = document.getElementById('colorPicker');
+seletor.addEventListener("change", function() {
+  let corSelecionada = seletor.value;
+  const body = document.querySelector('body');
+  body.style.backgroundColor = corSelecionada;
+});

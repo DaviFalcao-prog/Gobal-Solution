@@ -1,6 +1,11 @@
+//configurando seleção de cor do fundo
 const seletor = document.getElementById('colorPicker');
 seletor.addEventListener("change", function() {
-  var corSelecionada = seletor.value;
+  let corSelecionada = seletor.value;
+  const body = document.querySelector('body');
+  body.style.backgroundColor = corSelecionada;
+});
+
 
 const navLinks = document.querySelectorAll('.navbar a');
 const allSections = document.querySelectorAll('section');
