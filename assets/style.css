@@ -189,7 +189,7 @@ main section:hover{
     }
     .nav-links.open {      
         display: flex;
-    }  
+    }
     .hamburger-menu{
         display: block;
     }
@@ -202,12 +202,6 @@ main section:hover{
     .hamburger-menu.active .icon-menu  { 
         display: none;  
     } 
-    .hero h1{
-        font-size: 3rem;
-    }
-    .hero p{
-        font-size: 1.5rem;
-    }
     .cards-article{
         width: 80%;
     }

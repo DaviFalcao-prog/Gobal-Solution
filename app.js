@@ -26,15 +26,21 @@ navLinks.forEach(function (link) {
 //Configurando menu hamburguer
 const burger   = document.getElementById('hamburger-menu');
 const listaLink = document.getElementById('nav-links');
+const iconMenu = document.querySelector('.icone-menu');
+const iconClose = document.querySelector('.icone-fechado');
 
 //Abre o menu hamburguer ao clicar no icone
-burger.addEventListener('click', () => {
-  listaLink.classList.toggle('open');     // show / hide links
-  burger.classList.toggle('active');     // swap icons
+burger.addEventListener('click', function() {
+  const isOpen = listaLink.classList.contains('open');
+  iconClose.style.display = isOpen ? 'none' : 'block';
+  iconMenu.style.display = isOpen ? 'block' : 'none';
+  listaLink.classList.toggle('open');
+  burger.classList.toggle('active');
+
 });
 
 //Fecha menu hamburguer ao clicar em um link
-listaLink.querySelectorAll.forEach(link => {
+listaLink.querySelectorAll.forEach(function(link) {
   link.addEventListener('click', () => {
     listaLink.classList.remove('open');
     burger.classList.remove('active');
