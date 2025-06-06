@@ -4,22 +4,28 @@
 }
 html{
     scroll-behavior: smooth;
-}  
+}
+:root {
+    --theme-color: #0A1428;
+    --text-color: whitesmoke;
+    --head-footer-color: #152b59;
+    --text-section-color: #0c0180;
+} 
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 } 
 body{
-    background-color: #0A1428;
-    color: whitesmoke;
+    background-color: var(--theme-color);
+    color: var(--text-color);
     font-family: 'Montserrat', sans-serif; 
     padding-bottom: 10rem;
 }
 
 /* Header styles */
 .header{
-    background-color: #152b59;
+    background-color:var(--head-footer-color);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -70,7 +76,7 @@ body{
     height: auto;
     display: flex;
     align-items: center;
-    color: white;
+    color: var(--text-color);
 }
 .hero h1{
     font-family: 'caveat', sans-serif, cursive;
@@ -116,7 +122,7 @@ main section:hover{
 }
 .card{
     background-color: rgb(139, 155, 171);
-    color: #0c0180;
+    color: var(--text-section-color);
     margin: .75rem 0; /* 0.75rem = 12px */
     padding: 1em;
     text-align: center;
@@ -141,7 +147,7 @@ main section:hover{
 
 /* Footer styles */
 .footer{
-    background-color: #152b59;
+    background-color: var(--head-footer-color) ;
     padding: 1rem 0;
     display: flex;
     flex-direction: column;
@@ -180,7 +186,7 @@ main section:hover{
         position: absolute;
         top: 100%;           
         right: 0;
-        background: #152b59;
+        background: var(--head-footer-color);
         flex-direction: column;
         width: 200px;
         padding: 1rem;
