@@ -46,3 +46,30 @@ listaLink.querySelectorAll.forEach(function(link) {
     burger.classList.remove('active');
   });
 });
+
+
+//Configurando sistema de SlideShow
+const slides  = document.querySelectorAll('.slide');
+const nextBtn = document.getElementById('proximo');
+const prevBtn = document.getElementById('anterior');
+
+let currentIndex = 0;
+
+function showSlide(index) {
+  if (index < 0) {
+    index = slides.length - 1;
+  } else if (index >= slides.length) {
+    index = 0;
+  }
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[index].classList.add('active');
+  currentIndex = index;
+}
+
+nextBtn.addEventListener('click', function() {
+  showSlide(currentIndex + 1);
+});
+
+prevBtn.addEventListener('click', function() {
+  showSlide(currentIndex - 1);
+});
