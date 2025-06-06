@@ -109,6 +109,15 @@ body{
     color: rgb(0, 0, 0);
     transition: background-color 0.5s ease, color 0.5s ease;
 }
+#resultado{
+    display: none;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: yellowgreen;
+    text-shadow: #000 2px 2px 4px;
+    border-radius: 10px;
+}
 
 
 /*footer styles */
