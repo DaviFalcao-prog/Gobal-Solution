@@ -3,10 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/image/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/quiz.css">
+    <script src="https://kit.fontawesome.com/129b440489.js" crossorigin="anonymous"></script>
     <title>Quiz</title>
-    <link rel="shortcut icon" href="./assets/image/ChatGPT Image 2 de jun. de 2025, 18_48_18.png" type="image/x-icon">
 </head>
 <body>
-    
+    <header class="header">
+        <!-- Logo -->
+            <h1 class="logo">HydroShield</h1>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="hamburger-menu" id="hamburger-menu">
+                <i class="fas fa-bars icone-menu"></i>
+                <i class="fa-solid fa-xmark icone-fechado"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <div class="cores">
+                    <input type="color" class="color-picker" id="colorPicker">
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="title"><h1>Quiz sobre enchentes.</h1></div>
+        <form class="questions">
+            <div class="question">
+                <h2>O que é uma enchente?</h2>
+                <label><input type="radio" name="p1" value="a">A) Um terremoto na água.</label>
+                <label><input type="radio" name="p1" value="b">B) Uma tempestade com raios.</label>
+                <label><input type="radio" name="p1" value="c">C) Uma inundação causada pelo excesso de água.</label> <!-- correta -->
+                <label><input type="radio" name="p1" value="d">D) Um período longo sem chuva.</label>
+            </div>
+            <div class="question">
+                <h2>Qual tecnologia ajuda na previsão de enchentes utilizando algoritmos avançados?</h2>
+                <label><input type="radio" name="p2" value="a">A) Inteligência Artificial (IA)</label> <!-- correta -->
+                <label><input type="radio" name="p2" value="b">B) Impressão 3D</label>
+                <label><input type="radio" name="p2" value="c">C) Realidade Aumentada</label>
+                <label><input type="radio" name="p2" value="d">D) Blockchain</label>
+            </div>
+            <div class="question">
+                <h2>Qual o principal impacto econômico anual causado pelas enchentes no Brasil?</h2>
+                <label><input type="radio" name="p3" value="a">A) 100 milhões de reais</label>
+                <label><input type="radio" name="p3" value="b">B) 2 bilhões de reais</label>
+                <label><input type="radio" name="p3" value="c">C) 8 bilhões de reais</label> <!-- correta -->
+                <label><input type="radio" name="p3" value="d">D) 500 mil reais</label>
+            </div>
+            <div class="question">
+                <h2>Por que os sensores IoT são importantes na prevenção de enchentes?</h2>
+                <label><input type="radio" name="p4" value="a">A) São baratos e descartáveis.</label>
+                <label><input type="radio" name="p4" value="b">B) Permitem monitorar níveis de água e alertar antecipadamente sobre riscos </label> <!-- correta -->
+                <label><input type="radio" name="p4" value="c">C) Não precisam de energia para funcionar.</label>
+                <label><input type="radio" name="p4" value="d">D) Apenas armazenam dados após a inundação.</label>
+            </div>
+            <div class="question">
+                <h2>Qual desses aplicativos brasileiros auxilia no envio de alertas para cidadãos durante enchentes?</h2>
+                <label><input type="radio" name="p5" value="a">A) Alerta Rio</label> <!-- correta -->
+                <label><input type="radio" name="p5" value="b">B) Uber</label>
+                <label><input type="radio" name="p5" value="c">C) iFood</label>
+                <label><input type="radio" name="p5" value="d">D) Instagram</label>
+            </div>
+            <div class="question">
+                <h2>Qual região do Brasil foi dramaticamente afetada por enchentes em 2024?</h2>
+                <label><input type="radio" name="p6" value="a">A) Amazônia</label>
+                <label><input type="radio" name="p6" value="b">B) Rio Grande do Sul</label> <!-- correta -->
+                <label><input type="radio" name="p6" value="c">C) Goiás</label>
+                <label><input type="radio" name="p6" value="d">D) Minas Gerais</label>
+            </div>
+            <div class="question">
+                <h2>Qual ferramenta ajuda a criar modelos tridimensionais para planejar cidades mais resilientes?</h2>
+                <label><input type="radio" name="p7" value="a">A) Microsoft Word.</label>
+                <label><input type="radio" name="p7" value="b">B) Building Information Modeling (BIM).</label> <!-- correta -->
+                <label><input type="radio" name="p7" value="c">C) Adobe Photoshop.</label>
+                <label><input type="radio" name="p7" value="d">D) WhatsApp.</label>
+            </div>
+            <div class="question">
+                <h2>Qual desses satélites consegue monitorar enchentes mesmo à noite e com tempo nublado?</h2>
+                <label><input type="radio" name="p8" value="a">A) Satélites ópticos tradicionais.</label>
+                <label><input type="radio" name="p8" value="b">B) Satélites SAR (Synthetic Aperture Radar).</label> <!-- correta -->
+                <label><input type="radio" name="p8" value="c">C) Satélites meteorológicos comuns.</label>
+                <label><input type="radio" name="p8" value="d">D) Balões meteorológicos.</label>
+            </div>
+            <div class="question">
+                <h2>O que são sistemas de alerta precoce?</h2>
+                <label><input type="radio" name="p9" value="a">A) Alertas enviados após a enchente.</label>
+                <label><input type="radio" name="p9" value="b">B) Sistemas que preveem e alertam sobre enchentes antes que ocorram.</label> <!-- correta -->
+                <label><input type="radio" name="p9" value="c">C) Aplicativos de entretenimento para crianças.</label>
+                <label><input type="radio" name="p9" value="d">D) Ferramentas usadas somente por bombeiros.</label>
+            </div>
+            <div class="question">
+                <h2>Por que muitas cidades brasileiras enfrentam problemas frequentes com enchentes?</h2>
+                <label><input type="radio" name="p10" value="a">A) Por falta de políticas públicas eficazes e infraestrutura adequada.</label> <!-- correta -->
+                <label><input type="radio" name="p10" value="b">B) Porque têm muitas florestas.</label>
+                <label><input type="radio" name="p10" value="c">C) Por causa da falta de rios nas cidades.</label>
+                <label><input type="radio" name="p10" value="d">D) Devido ao clima frio.</label>
+            </div>
+            <button type="submit" class="btn-sub">Enviar</button>
+            <p id="resultado"></p>
+        </form>
+        
+    </main>
+
+    <footer class="footer">
+        <p class="footer-text">HydroShield &copy; 2025. Todos os direitos reservados.</p>
+        <p class="footer-text">Desenvolvido por Davi Falcão & Mateus Saavedra</p>
+        <nav class="footer-nav">
+                <p class="footer-text">Contato:</p>
+                <a href="#">99999-9999</a>
+                <a href="#">contato@nomeempresa.com.br</a>         
+        </nav>
+    </footer>
 </body>
+<script src="quiz.js"></script>
 </html>

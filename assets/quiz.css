@@ -2,9 +2,6 @@
     font-family: 'caveat';
     src: url('./font/Caveat-VariableFont_wght.ttf') format('truetype');
 }
-html{
-    scroll-behavior: smooth;
-}
 :root {
     --theme-color: #0A1428;
     --text-color: whitesmoke;
@@ -22,7 +19,6 @@ body{
     font-family: 'Montserrat', sans-serif; 
     padding-bottom: 10rem;
 }
-
 /* Header styles */
 .header{
     background-color:var(--head-footer-color);
@@ -66,142 +62,65 @@ body{
     transition: background-color 0.5s ease;
 }
 
-/* Hero section styles */
-.text{
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 1rem;
-}
-.hero-slideShow{
-    position: relative;
-    display: flex;
-    height: auto; 
-    flex-direction: column;
-    align-items: center;
-    color: var(--text-color);
-}
-.slideshow-container {
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-    z-index: 1;           
-  }
-.slide.active {
-    position: relative;
-    opacity: 1;
-    z-index: 1;
-}
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease;
-    z-index: 0;
-}
-  
-  
-.slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.hero-slideShow h1{
-    font-family: 'caveat', sans-serif, cursive;
-    font-size: 5rem;
-    margin-top: 2rem;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
-}
-.hero-slideShow p{
-    font-size: 2rem;
-    margin-top: 1rem;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
-}
-.nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 3rem;
-    background: rgba(0, 0, 0, 0.3);
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    z-index: 3;           
-    transition: background 0.3s ease;
-  }
-  
-.nav:hover {
-    background: rgba(0, 0, 0, 0.6);
-}
-  
-.nav.prev {
-    left: 10px;
-}
-  
-.nav.next {
-    right: 10px;
-}
-  
-
- /*main styles*/
- .main{
+/*main styles*/
+.main{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 2rem;
 }
-main section:hover{
-    outline: 3.5px solid #00b4ff;           
-    box-shadow: 0 0 10px #00b4ff;
-    transition: all 0.3s ease-in-out;        
-}
-/* Animação de Destaque das seções, achei que ficou legal então vou deixar comentado aqui.
-@keyframes pulse {
-    0%   { background-color: #fff; }
-    100% { background-color: transparent;        }
-  } 
-  .flash {
-    animation: pulse 1s ease-out;
-  }
-*/
-.cards-article{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 5rem;
-    width: 80%;
-}
-.card{
-    background-color: rgb(139, 155, 171);
-    color: var(--text-section-color);
-    margin: .75rem 0; /* 0.75rem = 12px */
-    padding: 1em;
+.title{
     text-align: center;
+}
+.questions{
+    color: var(--text-section-color);
     display: flex;
-    justify-content: space-around;
-    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgb(139, 155, 171);
+    padding: 2rem;
     border-radius: 10px;
 }
-.card img{
-    width: 200px;
+.question label{
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    color: rgb(170, 220, 255);
+    margin: 1rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
-.card h2{
-    margin-top: 1.5rem;
-    font-size: 2rem;
-    font-weight: bold;
-}
-.card p{
+.btn-sub{
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 1.5rem;
     font-size: 1.2rem;
-    margin-top: 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    border: none;
+}
+.btn-sub:hover{
+    background-color: rgba(0, 230, 255, 0.5);
+    color: rgb(0, 0, 0);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+#resultado{
+    display: none;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: yellowgreen;
+    text-shadow: #000 2px 2px 4px;
+    border-radius: 10px;
 }
 
 
-/* Footer styles */
+/*footer styles */
 .footer{
     z-index: 5;
     background-color: var(--head-footer-color) ;
@@ -273,15 +192,5 @@ main section:hover{
     }
     .hamburger-menu.active .icon-menu  { 
         display: none;  
-    }
-
-
-    /* Cards section styles */
-    .cards-article{
-        width: 80%;
-    }
-    .card{
-        flex-direction: column;
-        align-items: center;
     }
 }
