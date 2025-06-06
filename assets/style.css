@@ -72,24 +72,24 @@ body{
     margin-bottom: 1rem;
 
 }
-.hero{
+.hero-slideShow{
     flex-direction: column;
     height: auto;
     display: flex;
     align-items: center;
     color: var(--text-color);
 }
-.hero img{
+.hero-slideShow img{
     height: auto;
     border-radius: 10px;
 }
-.hero h1{
+.hero-slideShow h1{
     font-family: 'caveat', sans-serif, cursive;
     font-size: 5rem;
     margin-top: 2rem;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
 }
-.hero p{
+.hero-slideShow p{
     font-size: 2rem;
     margin-top: 1rem;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
@@ -222,8 +222,6 @@ main section:hover{
         display: none;  
     }
 
-    /* Hero section styles */
-    .hero
 
     /* Cards section styles */
     .cards-article{
