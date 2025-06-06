@@ -18,16 +18,17 @@ const correcao = {
 formulario.addEventListener("submit", function (e) {
     e.preventDefault();
     
-     if(resultado !== length.correcao){
-        alert("Por favor, responda todas as perguntas antes de enviar o formulário.");
-        return;
-     }
+
 
     // Calcula a pontuação
     let pontos = 0;
 
     for (let i = 1; i <= 10; i++) {
         const resposta = formulario.querySelector(`input[name="p${i}"]:checked`);
+        if(!resposta){
+          alert("Por favor, responda todas as perguntas antes de enviar o formulário.");
+          return;
+       }
         if (resposta && resposta.value === correcao[`p${i}`]) {
             pontos++;
         }
