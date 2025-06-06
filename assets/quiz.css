@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'caveat';
+    src: url('./font/Caveat-VariableFont_wght.ttf') format('truetype');
+}
+:root {
+    --theme-color: #0A1428;
+    --text-color: whitesmoke;
+    --head-footer-color: #152b59;
+    --text-section-color: #0c0180;
+} 
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+} 
+body{
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif; 
+    padding-bottom: 10rem;
+}
+/* Header styles */
+.header{
+    background-color:var(--head-footer-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 5;
+}
+.logo{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.header h1{
+    font-size: 2.8rem;
+    font-family: 'caveat', sans-serif, cursive;
+    color: rgb(0, 230, 255);
+}
+.hamburger-menu {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: rgb(170, 220, 255);
+  }
+.nav-links{
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+.nav-links a{
+    text-decoration: none;
+    color: rgb(170, 220, 255);
+}
+.nav-links a:hover{
+    background-color: rgba(0, 230, 255, 0.5);
+    border-radius: 5px;
+    border-bottom: rgb(170, 220, 255) 2px solid;
+    transition: background-color 0.5s ease;
+}
+
+/*main styles*/
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.title{
+    text-align: center;
+}
+.questions{
+    color: var(--text-section-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: rgb(139, 155, 171);
+    padding: 2rem;
+    border-radius: 10px;
+}
+.question label{
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    color: rgb(170, 220, 255);
+    margin: 1rem 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+.btn-sub{
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--theme-color);
+    color: var(--text-color);
+    border: none;
+}
+.btn-sub:hover{
+    background-color: rgba(0, 230, 255, 0.5);
+    color: rgb(0, 0, 0);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+
+/*footer styles */
+.footer{
+    z-index: 5;
+    background-color: var(--head-footer-color) ;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.footer-nav{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+.footer-nav a{
+    text-decoration: none;
+    color: #fff;
+}
+.footer-nav a:hover{
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 1000px) {
+    /* Header styles */
+    .header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+    .nav-links{
+        flex-direction: column;
+        position: absolute;
+        top: 100%;           
+        right: 0;
+        background: var(--head-footer-color);
+        flex-direction: column;
+        width: 200px;
+        padding: 1rem;
+        display: none;  
+        gap: 1rem;
+    }
+    .nav-links.open {      
+        display: flex;
+    }
+    /* Hamburger menu styles */
+    .hamburger-menu{
+        display: block;
+        padding: 0.3rem;
+    }
+    .hamburger-menu:hover{
+        transform: scale(1.1);
+        background: rgba(0, 0, 0, 0.4);;
+        border-radius: 4px;
+        transition: background-color 0.5s ease, transform 0.3s ease;
+    }
+    .hamburger-menu .icon-close {
+         display: none; 
+    }
+    .hamburger-menu.active .icon-close { 
+        display: inline; 
+    }
+    .hamburger-menu.active .icon-menu  { 
+        display: none;  
+    }
+}
