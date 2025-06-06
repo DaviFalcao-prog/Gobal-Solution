@@ -64,6 +64,7 @@ body{
     font-weight: bold;
     text-align: center;
     margin-bottom: 1rem;
+
 }
 .hero{
     flex-direction: column;
@@ -72,11 +73,14 @@ body{
     align-items: center;
     color: white;
 }
+.hero img{
+    height: auto;
+    border-radius: 10px;
+}
 .hero h1{
     font-family: 'caveat', sans-serif, cursive;
     font-size: 5rem;
     margin-top: 2rem;
-    font-weight: bold;
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 1);
 }
 .hero p{
@@ -169,6 +173,7 @@ main section:hover{
 
 
 @media screen and (max-width: 1000px) {
+    /* Header styles */
     .header{
         display: flex;
         justify-content: space-between;
@@ -190,8 +195,16 @@ main section:hover{
     .nav-links.open {      
         display: flex;
     }
+    /* Hamburger menu styles */
     .hamburger-menu{
         display: block;
+        padding: 0.3rem;
+    }
+    .hamburger-menu:hover{
+        transform: scale(1.1);
+        background: rgba(0, 0, 0, 0.4);;
+        border-radius: 4px;
+        transition: background-color 0.5s ease, transform 0.3s ease;
     }
     .hamburger-menu .icon-close {
          display: none; 
@@ -201,7 +214,12 @@ main section:hover{
     }
     .hamburger-menu.active .icon-menu  { 
         display: none;  
-    } 
+    }
+
+    /* Hero section styles */
+    .hero
+
+    /* Cards section styles */
     .cards-article{
         width: 80%;
     }
@@ -209,9 +227,4 @@ main section:hover{
         flex-direction: column;
         align-items: center;
     }
-    .hamburger-menu{
-        display: block;
-        cursor: pointer;
-    }
-    
 }
