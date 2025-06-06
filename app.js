@@ -1,4 +1,6 @@
 const seletor = document.getElementById('colorPicker');
+seletor.addEventListener("change", function() {
+  var corSelecionada = seletor.value;
 
 const navLinks = document.querySelectorAll('.navbar a');
 const allSections = document.querySelectorAll('section');

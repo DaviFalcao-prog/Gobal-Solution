@@ -18,18 +18,16 @@ const correcao = {
 formulario.addEventListener("submit", function (e) {
     e.preventDefault();
     
-    // Verifica se todas as questões foram respondidas
-    
       // Calcula a pontuação
       let pontos = 0;
-    
-      for (i=1; i<=10; i++) {
-        const resposta = formulario.querySelector(`input[name="${i}"]:checked`);
-        if (resposta.value === correcao[i]) {
-          pontos++;
+
+    for (let i = 1; i <= 10; i++) {
+        const resposta = formulario.querySelector(`input[name="p${i}"]:checked`);
+        if (resposta && resposta.value === correcao[`p${i}`]) {
+            pontos++;
         }
       }
-    
+      resultado.style.display = 'block';
       resultado.textContent = `Você acertou ${pontos} de 10 questões.`;
     });
 
